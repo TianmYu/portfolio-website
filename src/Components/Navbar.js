@@ -50,6 +50,9 @@ class NavBar extends Component {
                                     <NavDropdown.Item className="nav-dropdown" href="/projects">Item2</NavDropdown.Item>
                                     <NavDropdown.Item className="nav-dropdown" href="/projects">Item3</NavDropdown.Item>
                             </NavDropdown>
+                            <Nav.Item className="nav-item">
+                                <Nav.Link href="/contact" >Contact</Nav.Link>
+                            </Nav.Item>
                         </Nav>
                     </div>
                     <div className="col-1 borderless navbar">
