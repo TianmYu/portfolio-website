@@ -46,6 +46,30 @@
   border:0;
 }
 
+.min-w-280{
+  min-width: 280px;
+}
+
+/* Vertical centering for text */
+.text-outer {
+  text-align:center;
+  height: 100%;
+}
+
+.text-outer:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+  margin-top:-0.25em;
+}
+
+.text-inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* Navbar */
 .logo-outer-container {
   min-width:145px;
@@ -97,4 +121,13 @@
 
 .nav-dropdown{
   color: #5885AF; 
+}
+
+/* Homepage */
+.homepage-intro-box{
+  height:100vh;
+}
+
+.homepage-intro-text{
+  text-align: left;
 }

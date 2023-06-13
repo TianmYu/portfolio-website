@@ -31,10 +31,10 @@ class NavBar extends Component {
             <div className="container-fluid borderless">
                 <div className="row no-gutters borderless">
                     <div className="col-2 borderless logo-outer-container"> 
-                    <div className="logo-outer">
-                        <div className="logo-inner">
-                            <a href="/" className="logo-text">  Tian Engineers  </a>
-                        </div>
+                        <div className="logo-outer">
+                            <div className="logo-inner">
+                                <a href="/" className="logo-text">  Tian Engineers  </a>
+                            </div>
                         </div>
                     </div> 
                     <div className="col borderless">
