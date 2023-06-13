@@ -29,10 +29,16 @@ class NavBar extends Component {
 
     render(){
         return (
-            <div class="container-fluid borderless">
-                <div class="row no-gutters borderless">
-                    <div class="col-2 borderless"><a className="logo-container" href="/">Tian Engineers</a></div>
-                    <div class="col borderless">
+            <div className="container-fluid borderless">
+                <div className="row no-gutters borderless">
+                    <div className="col-2 borderless logo-outer-container"> 
+                    <div className="logo-outer">
+                        <div className="logo-inner">
+                            <a href="/" className="logo-text">  Tian Engineers  </a>
+                        </div>
+                        </div>
+                    </div> 
+                    <div className="col borderless">
                         <Nav className="navbar" variant="underline" activeKey={this.state.activeTab}>
                             <Nav.Item className="nav-item">
                                 <Nav.Link href="/about" >About</Nav.Link>
@@ -47,8 +53,8 @@ class NavBar extends Component {
                             </NavDropdown>
                         </Nav>
                     </div>
-                    <div class="col-1 borderless">
-                        <div class="logo-container"></div>
+                    <div className="col-1 borderless navbar">
+                        <div className="logo-container"></div>
                     </div>
                 </div>
             </div>
