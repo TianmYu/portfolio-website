@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import NavItem from 'react-bootstrap/NavItem';
 import Nav from 'react-bootstrap/Nav';
-import NavLink from 'react-bootstrap/NavLink';
 
 class NavBar extends Component {
     state = {
@@ -14,10 +13,10 @@ class NavBar extends Component {
         let path = window.location.pathname;
         let projectsActive = false;
         
-        if (path == "/"){
+        if (path === "/"){
             path = "/home";
         }
-        if (path == "/projects"){
+        if (path === "/projects"){
             projectsActive = true;
         }
         console.log(path)
