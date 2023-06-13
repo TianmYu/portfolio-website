@@ -47,11 +47,37 @@
 }
 
 /* Navbar */
-.logo-container {
+.logo-outer-container {
+  min-width:145px;
+}
+
+.logo-outer {
   background-color: #F7F4F3;
   height:100%;
-  display:flex;
+  min-width:145px;
   justify-content: left;
+  text-align:center;
+}
+
+.logo-outer:before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+
+.logo-inner {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.logo-text{
+  font-weight: bold;
+  text-decoration: none;
+  font-size: larger;
+  white-space: nowrap;
 }
 
 .navbar {
