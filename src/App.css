@@ -126,8 +126,30 @@
 /* Homepage */
 .homepage-intro-box{
   height:100vh;
+  
 }
 
 .homepage-intro-text{
+  text-align: left;
+}
+
+/* Timeline */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 40px 0;
+}
+
+.timeline-container::after {
+  background-color: #e17b77;
+  content: '';
+  position: absolute;
+  left: -20px;
+  width: 4px;
+  height: 100%;
+}
+
+.timeline-text{
   text-align: left;
 }

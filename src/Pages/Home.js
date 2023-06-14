@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
+import Timeline from '../Components/Timeline';
 
 function Home() {
     return(
@@ -32,12 +33,15 @@ function Home() {
           <Col className="col-2"></Col>
         </Row>
         <Row className="homepage-intro">
-          <Col className="col-2"></Col>
-          <Col></Col>
+          <Col className="col-1"></Col>
+          <Col className="col-4">
+          <Timeline/>
+          </Col>
+
           <Col></Col>
           <Col className="col-2"></Col>
         </Row>
-
+        
       </Container>
     </main>
     );
