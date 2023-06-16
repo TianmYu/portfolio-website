@@ -1,9 +1,9 @@
 let TimelineData = [
     {
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla enim, aliquam vitae',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         date: 'March 03 2017',
         category: {
-            tag: 'medium',
+            tag: 'sample tag',
             color: '#018f69'
         },
         link: {
@@ -12,10 +12,10 @@ let TimelineData = [
         }
     },
     {
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla enim, aliquam vitae',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         date: 'March 03 2017',
         category: {
-            tag: 'medium',
+            tag: 'sample tag',
             color: '#018f69'
         },
         link: {
@@ -24,10 +24,10 @@ let TimelineData = [
         }
     },
     {
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla enim, aliquam vitae',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
         date: 'March 03 2017',
         category: {
-            tag: 'medium',
+            tag: 'sample tag',
             color: '#018f69'
         },
         link: {

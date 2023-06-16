@@ -5,12 +5,18 @@ const TimelineItem = ({ data }) => {
     return (
     <div className="timeline-item">
         <div className="timeline-item-content">
-            <span className="tag" style={{ background: data.category.color }}>
-                {data.category.tag}
-            </span>
-            <time>{data.date}</time>
-            <p className="timeline-text">{data.text}</p>
+        <div className="container-fluid borderless">
+            <div className="row no-gutters borderless">
+                <span className="timeline-tag" style={{ background: data.category.color }}>
+                    <div className="timeline-tag-text"> {data.category.tag} </div>
+                </span>
+                    <time datetime={data.date} className="timeline-time"> {data.date} </time>
+            </div>
+            <div className="row no-gutters borderless">
+                <p className="timeline-text">{data.text}</p>
+            </div>
             <span className="circle" />
+        </div>
         </div>
     </div>);
 };
