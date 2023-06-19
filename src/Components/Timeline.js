@@ -1,24 +1,36 @@
 import timelineData from './TimelineData';
 
 const TimelineItem = ({ data }) => {
-    console.log(data)
+    if (data.type === "entry"){
     return (
     <div className="timeline-item">
         <div className="timeline-item-content">
         <div className="container-fluid borderless">
-            <div className="row no-gutters borderless">
+            <div className="row no-gutters borderless timeline-header">
+                <time datetime={data.date} className="timeline-date"> {data.date} </time>
                 <span className="timeline-tag" style={{ background: data.category.color }}>
                     <div className="timeline-tag-text"> {data.category.tag} </div>
-                </span>
-                    <time datetime={data.date} className="timeline-time"> {data.date} </time>
+                </span>  
             </div>
             <div className="row no-gutters borderless">
                 <p className="timeline-text">{data.text}</p>
             </div>
-            <span className="circle" />
+            <span className="timeline-circle" />
         </div>
+        
         </div>
     </div>);
+    }
+    else{
+        return (
+            <div className="timeline-date-heading">
+                <div>
+                    {data.text}
+                </div>
+                <span className="timeline-circle" style={{backgroundColor: data.color}} />
+            </div>
+        )
+    }
 };
 
 const Timeline = () =>
