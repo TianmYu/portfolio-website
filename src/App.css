@@ -125,11 +125,21 @@
 
 /* Homepage */
 .homepage-intro-box{
-  height:calc(100vh - 50px); /* hacky height for now, need to account for top bar dynamically */
+  height:calc(100vh - 100px); /* hacky height for now, need to account for top bar dynamically */
 }
 
 .homepage-intro-text{
   text-align: left;
+}
+
+.homepage-format{
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+.homepage-divider{
+  background-color:#5885AF;
+  height:2px;
 }
 
 /* Timeline */
@@ -137,7 +147,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 40px 0px;
+  margin: 80px 0px 40px 0px;
 }
 
 .timeline-container::after { /*timeline line*/
@@ -147,6 +157,10 @@
   left: -20px;
   width: 4px;
   height: 100%;
+}
+
+.timeline-title{
+  text-align:left;
 }
 
 .timeline-circle{
@@ -209,4 +223,32 @@
   font-size:x-large;
   padding-left:20px;
   position:relative;
+}
+
+/* Sliding drawer */
+.side-drawer { 
+   height: 100%;
+   background: white;
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 55%;
+   z-index: 200;
+   box-shadow: 1px 0px 7px rgba(0,0,0,0.5); 
+   transform: translateX(100%);
+   transition: transform 0.3s ease-out;
+}
+.side-drawer.open {
+   transform: translateX(0);
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 100;
+  top: 0;
+  right: 0;
 }

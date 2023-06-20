@@ -1,50 +1,99 @@
+import React, { Component } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import Timeline from '../Components/Timeline';
+import Drawer from '../Components/SlideDrawer';
+import Backdrop from '../Components/Backdrop';
 
-function Home() {
-    return(
-    <main>
-      <Container fluid={true}>
-        <Row className="homepage-intro-box">
-          <Col className="col-2"></Col>
-          <Col className="min-w-280">
-            <div className="text-outer">
-              <div className="text-inner">
-                <h1 className="homepage-intro-text">
-                  Catchy Title Here
-                </h1>
-                <p className="homepage-intro-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla enim, aliquam vitae 
-                  tortor sed, pretium pellentesque mi. Vivamus accumsan, quam sit amet interdum bibendum
-                </p>
-              </div>
-            </div>
-          </Col>
-          <Col className="col-4 min-w-280">
-            <div className="text-outer">
-              <div className="text-inner">
-              <Image src="https://placehold.co/600x400" fluid rounded />
-              </div>
-            </div>
-          </Col>
-          <Col className="col-2"></Col>
-        </Row>
-        <Row className="homepage-intro">
-          <Col className="col-1"></Col>
-          <Col className="col-4">
-          <Timeline/>
-          </Col>
+class Home extends Component {
+  state = {
+    drawerOpen: false
+  }
 
-          <Col></Col>
-          <Col className="col-2"></Col>
-        </Row>
-        
-      </Container>
-    </main>
-    );
-}
+  drawerToggleClickHandler = (message, event) => {
+    console.log("test")
+    console.log(message)
+    console.log(event)
+    this.setState({
+      drawerOpen: !this.state.drawerOpen
+    })
+  }
+
+  backdropClickHandler = () => {
+    this.setState({
+      drawerOpen: false
+    })
+  }
+ 
+  // componentDidMount() {
+  //     let path = window.location.pathname;
+  //     let projectsActive = false;
+      
+  //     if (path === "/"){
+  //         path = "/home";
+  //     }
+  //     if (path === "/projects"){
+  //         projectsActive = true;
+  //     }
+  //     console.log(path)
+  //     this.setState({
+  //         activeTab: path,
+  //         projectsActive: projectsActive
+  //     });
+  // }
+
+    render () {
+      let backdrop;
+      if(this.state.drawerOpen){
+        backdrop = <Backdrop close={this.backdropClickHandler.bind(this)}/>;
+       }
+
+      return(
+      <main>
+        <Drawer show={this.state.drawerOpen}/>
+        {backdrop}
+        <Container fluid={true} className="homepage-format">
+          <Row className="homepage-intro-box">
+            <Col className="min-w-280">
+              <div className="text-outer">
+                <div className="text-inner">
+                  <h1 className="homepage-intro-text">
+                    Catchy Title Here
+                  </h1>
+                  <p className="homepage-intro-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla enim, aliquam vitae 
+                    tortor sed, pretium pellentesque mi. Vivamus accumsan, quam sit amet interdum bibendum
+                  </p>
+                </div>
+              </div>
+            </Col>
+            <Col className="col-4 min-w-280 mx-auto">
+              <div className="text-outer">
+                <div className="text-inner">
+                <Image src="https://placehold.co/600x400" fluid rounded />
+                </div>
+              </div>
+            </Col>
+          </Row>
+
+          <Row>
+          <Col> <div className="homepage-divider"/> </Col>
+          </Row>
+
+          <Row className="homepage-intro">
+            <Col className="col-4">
+            <Timeline toggle={this.drawerToggleClickHandler.bind(this)}/>
+            </Col>
+
+            <Col></Col>
+          </Row>
+          
+        </Container>
+      </main>
+      );
+    }
+  }
 
 export default Home
