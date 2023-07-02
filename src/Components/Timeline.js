@@ -2,9 +2,13 @@ import React, { Component } from "react";
 import timelineDataRaw from './TimelineData';
 
 const TimelineItem = ({ data, clickHandler }) => { 
+    let itemClass = "timeline-item"
+    if (data.page_link){
+        itemClass = "timeline-item timeline-link"
+    }
     return (
-    <div onClick={() => clickHandler("test 123")}>
-        {data.type === "entry" && <div className="timeline-item">
+    <div onClick={() => clickHandler(data.page_link, data.page)}>
+        {data.type === "entry" && <div className={itemClass}>
             <div className="timeline-item-content">
             <div className="container-fluid borderless">
                 <div className="row no-gutters borderless timeline-header">

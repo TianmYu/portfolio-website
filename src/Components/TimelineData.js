@@ -10,6 +10,8 @@ let TimelineData = [
             url:
                 'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
         },
+        page_link: true,
+        page: 'test1',
         type: 'entry'
     },
     {
@@ -28,6 +30,8 @@ let TimelineData = [
             url:
                 'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
         },
+        page_link: true,
+        page: 'test2',
         type: 'entry'
     },
     {
@@ -40,6 +44,7 @@ let TimelineData = [
         link: {
             url: 'https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2',
         },
+        page_link: false,
         type: 'entry'
     }
 ];

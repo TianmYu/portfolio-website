@@ -7,42 +7,43 @@ import Timeline from '../Components/Timeline';
 import Drawer from '../Components/SlideDrawer';
 import Backdrop from '../Components/Backdrop';
 
+import {Test1, Test2} from '../TimelinePages/index';
+
+
 class Home extends Component {
   state = {
-    drawerOpen: false
+    drawerOpen: false,
+    openPage: '',
   }
 
-  drawerToggleClickHandler = (message, event) => {
-    console.log("test")
-    console.log(message)
-    console.log(event)
-    this.setState({
-      drawerOpen: !this.state.drawerOpen
-    })
+  drawerToggleClickHandler = (has_page, page) => {
+    if (has_page){
+      const rootBody = document.getElementById("root-body");
+      let scrollbarWidth = (window.innerWidth - document.body.clientWidth) + 'px';
+
+      rootBody.style.overflow="hidden";
+      rootBody.style.width="calc(100% - " + scrollbarWidth + ")";
+      
+      this.setState({
+        drawerOpen: !this.state.drawerOpen,
+        openPage: page
+      })
+    }
   }
 
   backdropClickHandler = () => {
+    const rootBody = document.getElementById("root-body");
+
+    setTimeout(()=> {
+      rootBody.style.overflow="visible"
+      rootBody.style.width="100%";
+    }, 250)
+
     this.setState({
       drawerOpen: false
     })
   }
  
-  // componentDidMount() {
-  //     let path = window.location.pathname;
-  //     let projectsActive = false;
-      
-  //     if (path === "/"){
-  //         path = "/home";
-  //     }
-  //     if (path === "/projects"){
-  //         projectsActive = true;
-  //     }
-  //     console.log(path)
-  //     this.setState({
-  //         activeTab: path,
-  //         projectsActive: projectsActive
-  //     });
-  // }
 
     render () {
       let backdrop;
@@ -52,7 +53,7 @@ class Home extends Component {
 
       return(
       <main>
-        <Drawer show={this.state.drawerOpen}/>
+        <Drawer show={this.state.drawerOpen} page={this.state.openPage}/>
         {backdrop}
         <Container fluid={true} className="homepage-format">
           <Row className="homepage-intro-box">
