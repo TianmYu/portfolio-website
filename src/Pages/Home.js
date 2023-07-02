@@ -60,29 +60,36 @@ class Home extends Component {
             <Col className="min-w-280">
               <div className="text-outer">
                 <div className="text-inner">
+                  <h2 className="homepage-intro-text">
+                    Tian Yu
+                  </h2>
                   <h1 className="homepage-intro-text">
-                    Catchy Title Here
+                    AI. Automation. Androids.
                   </h1>
-                  <p className="homepage-intro-text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla enim, aliquam vitae 
-                    tortor sed, pretium pellentesque mi. Vivamus accumsan, quam sit amet interdum bibendum
+                  <p className="homepage-intro-text homepage-intro-body">
+                    I'm a <span className="emphasis">robotics engineer</span> and <span className="emphasis">software developer </span> 
+                    committed to solving tough problems and leveraging automation for our benefit. Looking to work with a passionate team
+                    ideally based in North America.
+                  </p>
+                  <p className="homepage-intro-text homepage-intro-body">
+                    <a href="#projects"> <b> See my work </b> </a>
                   </p>
                 </div>
               </div>
             </Col>
-            <Col className="col-4 min-w-280 mx-auto">
+            {/* <Col className="col-4 min-w-280 mx-auto">
               <div className="text-outer">
                 <div className="text-inner">
                 <Image src="https://placehold.co/600x400" fluid rounded />
                 </div>
               </div>
-            </Col>
+            </Col> */}
           </Row>
 
           <Row>
           <Col> <div className="homepage-divider"/> </Col>
           </Row>
-
+          <a id="projects">
           <Row className="homepage-intro">
             <Col className="col-4">
             <Timeline toggle={this.drawerToggleClickHandler.bind(this)}/>
@@ -90,6 +97,7 @@ class Home extends Component {
 
             <Col></Col>
           </Row>
+          </a>
           
         </Container>
       </main>

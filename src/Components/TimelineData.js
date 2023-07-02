@@ -17,7 +17,6 @@ let TimelineData = [
     {
         text: "May 2020",
         type: 'timestamp',
-        color: '#F7F4F3',
     },
     {
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',

@@ -29,7 +29,7 @@ const TimelineItem = ({ data, clickHandler }) => {
             <div>
                 {data.text}
             </div>
-            <span className="timeline-circle" style={{backgroundColor: data.color}} />
+            <span className="timeline-circle-date" />
         </div>}
     </div>
     )

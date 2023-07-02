@@ -28,7 +28,7 @@ class NavBar extends Component {
 
     render(){
         return (
-            <div className="container-fluid borderless">
+            <div className="container-fluid borderless navbar-sticky">
                 <div className="row no-gutters borderless">
                     <div className="col-2 borderless logo-outer-container"> 
                         <div className="logo-outer">
