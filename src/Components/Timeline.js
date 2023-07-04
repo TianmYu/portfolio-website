@@ -26,8 +26,9 @@ const TimelineItem = ({ data, clickHandler }) => {
             </div>
         </div>}
         {data.type === "timestamp" && <div className="timeline-date-heading">
+            <a className="anchor" id={data.text}> </a>
             <div>
-                {data.text}
+                {data.text}   
             </div>
             <span className="timeline-circle-date" />
         </div>}
@@ -41,7 +42,7 @@ class Timeline extends Component {
         return(
             timelineData.length > 0 && (
                 <div className="timeline-container">
-                    <h2 className="timeline-title"> Projects </h2>
+                    <h2 className="timeline-title"> Projects & Work History </h2>
                     {timelineData.map((data, idx) => (
                         <TimelineItem data={data} key={idx} clickHandler={this.props.toggle}/>
                     ))}

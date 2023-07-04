@@ -1,5 +1,5 @@
 :root {
-  --text-color: #d8dde8;
+  --text-color: #e3e3e3;
   --text-hover-color:#c3cce0;
   --dark-clickable-color: #487aa3;
   --highlight-color: #61dafb;
@@ -48,6 +48,13 @@ a:hover {
   color: var(--bs-link-hover-color)
 }
 
+a.anchor {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -91,6 +98,7 @@ a:hover {
 /* Navbar */
 .navbar-sticky{
   position:fixed;
+  z-index:2;
 }
 
 .logo-outer-container {
@@ -179,6 +187,7 @@ a:hover {
   flex-direction: column;
   position: relative;
   margin: 80px 0px 40px 0px;
+  z-index:1;
 }
 
 .timeline-container::after { /*timeline line*/
@@ -224,8 +233,7 @@ a:hover {
 .timeline-item{
   background-color: var(--text-color);
   position:relative;
-  display: flex;
-  justify-content: flex-end;
+  float:left;
   margin: 25px 0px 25px 0px;
   border-radius: 5px;
   min-width: 185px;
@@ -236,6 +244,7 @@ a:hover {
   color:var(--dark-text-color);
   padding-left:20px;
   padding-right:40px;
+  white-space: pre-wrap;
   /* margin: 0px 20px 20px 20px; */
 }
 
@@ -245,6 +254,7 @@ a:hover {
   width: max-content;
   border-radius:5px;
   margin-left: 10px;
+  margin-right:20px;
 }
 
 .timeline-tag-text{

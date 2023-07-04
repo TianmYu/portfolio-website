@@ -16,6 +16,14 @@ class Home extends Component {
     openPage: '',
   }
 
+  componentDidMount(){
+    let scrollPos = JSON.parse(window.localStorage.getItem('scrollPos'))
+    if (scrollPos !== ""){
+      document.getElementById(scrollPos).scrollIntoView({ behavior: "smooth"});
+    }
+    window.localStorage.setItem('scrollPos', JSON.stringify(""))
+  }
+
   drawerToggleClickHandler = (has_page, page) => {
     if (has_page){
       const rootBody = document.getElementById("root-body");
@@ -58,6 +66,7 @@ class Home extends Component {
         <Container fluid={true} className="homepage-format">
           <Row className="homepage-intro-box">
             <Col className="min-w-280">
+              <a id="home"> </a>
               <div className="text-outer">
                 <div className="text-inner">
                   <h2 className="homepage-intro-text">
@@ -71,9 +80,9 @@ class Home extends Component {
                     committed to solving tough problems and leveraging automation for our benefit. Looking to work with a passionate team
                     ideally based in North America.
                   </p>
-                  <p className="homepage-intro-text homepage-intro-body">
-                    <a href="#projects"> <b> See my work </b> </a>
-                  </p>
+                  <h2 className="homepage-intro-text">
+                    <a href="#projects"> See my work</a> 
+                  </h2> 
                 </div>
               </div>
             </Col>
@@ -89,16 +98,14 @@ class Home extends Component {
           <Row>
           <Col> <div className="homepage-divider"/> </Col>
           </Row>
-          <a id="projects">
+          <a id="projects"> </a>
           <Row className="homepage-intro">
-            <Col className="col-4">
+            <Col className="col-5">
             <Timeline toggle={this.drawerToggleClickHandler.bind(this)}/>
             </Col>
 
             <Col></Col>
           </Row>
-          </a>
-          
         </Container>
       </main>
       );
