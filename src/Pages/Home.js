@@ -6,6 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Timeline from '../Components/Timeline';
 import Drawer from '../Components/SlideDrawer';
 import Backdrop from '../Components/Backdrop';
+import Socials from '../Components/Socials'
 
 import {Test1, Test2} from '../TimelinePages/index';
 
@@ -61,6 +62,7 @@ class Home extends Component {
 
       return(
       <main>
+        <Socials />
         <Drawer show={this.state.drawerOpen} page={this.state.openPage}/>
         {backdrop}
         <Container fluid={true} className="homepage-format">
@@ -68,7 +70,7 @@ class Home extends Component {
             <Col className="min-w-280">
               <a id="home"> </a>
               <div className="text-outer">
-                <div className="text-inner">
+                <div className="text-inner-homepage">
                   <h2 className="homepage-intro-text">
                     Tian Yu
                   </h2>

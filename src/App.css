@@ -8,7 +8,7 @@
 
 .App {
   text-align: center;
-  background-color: #0E1428;
+  background-color: var(--dark-text-color);
   color: var(--text-color);
   min-height: 100vh;
 }
@@ -89,10 +89,15 @@ a.anchor {
   margin-top:-0.25em;
 }
 
-.text-inner {
+.text-inner-homepage {
   display: inline-block;
   vertical-align: middle;
   margin-top:10vh;
+}
+
+.text-inner {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* Navbar */
@@ -179,6 +184,25 @@ a.anchor {
 .homepage-divider{
   background-color:var(--dark-clickable-color);
   height:2px;
+}
+
+.socials{
+  position:fixed;
+  bottom:15px;
+  right:15px;
+}
+
+.socials-bubble{
+  height: 35px;
+  width: 35px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+  z-index:2;
+  margin:15px;
+}
+
+.socials-bubble:hover{
+  background-color: var(--text-hover-color);
 }
 
 /* Timeline */
