@@ -13,8 +13,7 @@ class NavBar extends Component {
     }
 
     clickHandler = (scrollPos) =>{
-        console.log("setting: " + scrollPos)
-        window.localStorage.setItem('scrollPos', JSON.stringify(scrollPos))
+        window.localStorage.setItem('scrollPos', JSON.stringify(scrollPos)) //TODO: kind of janky, maybe refactor
     }
 
     projectDates = () =>{
@@ -22,7 +21,7 @@ class NavBar extends Component {
         return(
             timelineData.map((data, idx) => (
                 data.type === 'timestamp' &&
-                <NavDropdown.Item className="nav-dropdown" href={"/#"+data.text} onClick={() => {this.clickHandler(data.text)}}>{data.text}</NavDropdown.Item>
+                <NavDropdown.Item className="nav-dropdown" key={data.text} href={"/#"+data.text} onClick={() => {this.clickHandler(data.text)}}>{data.text}</NavDropdown.Item>
             ))
         )
     }
@@ -54,16 +53,16 @@ class NavBar extends Component {
                     <div className="col borderless">
                         <Nav className="navbar" variant="underline" activeKey={this.state.activeTab}>
                             <Nav.Item className="nav-item">
-                                <Nav.Link href="/about" >About</Nav.Link>
+                                <Nav.Link href="/about" key={'about'}>About</Nav.Link>
                             </Nav.Item>
                             <NavDropdown
-                                title='Projects' className="nav-item" active={this.state.projectsActive} id="projects-dropdown">
-                                    <NavDropdown.Item className="nav-dropdown" href="#projects" onClick={() => {this.clickHandler("projects")}}>Timeline</NavDropdown.Item>
+                                title='Projects' className="nav-item" active={this.state.projectsActive} id="projects-dropdown" key={'projects-dropdown'}>
+                                    <NavDropdown.Item className="nav-dropdown" href="#projects" key={'projects'} onClick={() => {this.clickHandler("projects")}}>Timeline</NavDropdown.Item>
                                     <NavDropdown.Divider />
                                     {this.projectDates()}
                             </NavDropdown>
                             <Nav.Item className="nav-item">
-                                <Nav.Link href="/contact" >Contact</Nav.Link>
+                                <Nav.Link href="/contact" key={'contact'}>Contact</Nav.Link>
                             </Nav.Item>
                         </Nav>
                     </div>

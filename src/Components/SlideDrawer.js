@@ -28,7 +28,6 @@ class SlideDrawer extends Component {
 
    render(){
        let drawerClasses = 'side-drawer'
-       console.log(this.state.timelinePages.test1.scrollPos)
        if(this.props.show) {
           drawerClasses = 'side-drawer open'
        }

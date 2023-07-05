@@ -19,9 +19,9 @@ class Home extends Component {
   componentDidMount(){
     let scrollPos = JSON.parse(window.localStorage.getItem('scrollPos'))
     if (scrollPos !== ""){
-      document.getElementById(scrollPos).scrollIntoView({ behavior: "smooth"});
+      document.getElementById(scrollPos).scrollIntoView({ behavior: "smooth"}); //TODO: kind of janky, maybe refactor to use ref
     }
-    window.localStorage.setItem('scrollPos', JSON.stringify(""))
+    window.localStorage.setItem('scrollPos', JSON.stringify("")) 
   }
 
   drawerToggleClickHandler = (has_page, page) => {
