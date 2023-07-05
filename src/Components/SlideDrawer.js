@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {Test1, Test2} from '../TimelinePages/index';
 
+import ResumePage from '../Pages/ResumeSlider.js'
+
 class SlideDrawer extends Component {
    // props: show, page 
    // also needs to record where the scroll is in each page
@@ -13,6 +15,10 @@ class SlideDrawer extends Component {
          test2: {
             scrollPos: 0,
             component: <Test2 scroll={this.drawerScrollHandler.bind(this)}/>,
+         },
+         ResumePage: {
+            scrollPos: 0,
+            component: <ResumePage scroll={this.drawerScrollHandler.bind(this)}/>,
          }
       }
    }
