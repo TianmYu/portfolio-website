@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7a2c16e7.css",
+    "main.js": "/static/js/main.e371ab8d.js",
+    "static/js/787.749b4a44.chunk.js": "/static/js/787.749b4a44.chunk.js",
+    "static/media/diamond.png": "/static/media/diamond.e4644a7d5b6ed33e1a52.png",
+    "static/media/Resume-Tian-Yu.pdf": "/static/media/Resume-Tian-Yu.11afc3ad3e81deddafbe.pdf",
+    "static/media/Linkedin-profile-old.jpg": "/static/media/Linkedin-profile-old.bfea1dc954ca49159deb.jpg",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/GitHub-logo.svg": "/static/media/GitHub-logo.8fe5f048b11793dbcfb6094fada31ff5.svg",
+    "static/media/linkedin-logo.svg": "/static/media/linkedin-logo.114b4791ec32d586bc0b445e2ee69f5d.svg",
+    "static/media/facebook-social-logo.svg": "/static/media/facebook-social-logo.90cdd7af017e1baec4e7e94b37db40cd.svg",
+    "index.html": "/index.html",
+    "main.7a2c16e7.css.map": "/static/css/main.7a2c16e7.css.map",
+    "main.e371ab8d.js.map": "/static/js/main.e371ab8d.js.map",
+    "787.749b4a44.chunk.js.map": "/static/js/787.749b4a44.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7a2c16e7.css",
+    "static/js/main.e371ab8d.js"
+  ]
+}
