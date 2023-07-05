@@ -202,9 +202,9 @@ let TimelineData = [
 
 const categoryColors = {
     'Education': '#3a7de8', // light blue
-    'Competitions': '#e8b13a', // yellow
+    'Competitions': '#bd8f06', // yellow
     'Blue Sky Solar Racing': '#10369e', // dark blue
-    'Work': '#3aa822', // green
+    'Work': '#2b823c', // green
 }
 
 TimelineData = TimelineData.map((item) => {
