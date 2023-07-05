@@ -46,6 +46,7 @@ a {
 
 a:hover {
   color: var(--bs-link-hover-color);
+  cursor: pointer;
 }
 
 a:hover .contact-bubble{
@@ -91,6 +92,10 @@ a.anchor {
 }
 
 /* Vertical centering for text */
+.rough-centering{
+  margin-top:35vh;
+}
+
 .text-outer {
   height: 100%;
   display:flex;
@@ -369,4 +374,12 @@ a.anchor {
   z-index: 100;
   top: 0;
   right: 0;
+}
+
+.resume-viewer-style{
+  height:100vh;
+}
+
+.pg-viewer-wrapper{
+  overflow-y:unset !important;
 }

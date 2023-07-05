@@ -99,19 +99,8 @@ let TimelineData = [
         type: 'entry'
     },
     {
-        text: 'Full Stack Developer - Overbond\nCompletion of Internship',
+        text: 'Full Stack Developer - Overbond\nCompletion of Work Term',
         date: 'August 2022',
-        category: {
-            tag: 'Work',
-            color: '#018f69'
-        },
-        page_link: false,
-        page: 'Overbond',
-        type: 'entry'
-    },
-    {
-        text: 'Overbond\nStarted position: Full Stack Developer',
-        date: 'May 2022',
         category: {
             tag: 'Work',
             color: '#018f69'
@@ -125,8 +114,23 @@ let TimelineData = [
         type: 'timestamp',
     },
     {
+        text: 'Overbond\nStarted position: Full Stack Developer',
+        date: 'May 2021',
+        category: {
+            tag: 'Work',
+            color: '#018f69'
+        },
+        page_link: false,
+        page: 'Overbond',
+        type: 'entry'
+    },
+    {
+        text: 2020,
+        type: 'timestamp',
+    },
+    {
         text: 'Blue Sky Solar\nStarted posiiton: Chief Engineer',
-        date: 'September 2021',
+        date: 'September 2020',
         category: {
             tag: 'Blue Sky Solar Racing',
             color: '#018f69'
@@ -134,10 +138,6 @@ let TimelineData = [
         page_link: false,
         page: 'ChiefEng',
         type: 'entry'
-    },
-    {
-        text: 2020,
-        type: 'timestamp',
     },
     {
         text: 'Skule Ski Trip - President\nOrganized 56 person ski trip to Quebec',
