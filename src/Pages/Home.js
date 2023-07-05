@@ -71,18 +71,18 @@ class Home extends Component {
               <a id="home"> </a>
               <div className="text-outer">
                 <div className="text-inner-homepage">
-                  <h2 className="homepage-intro-text">
+                  <h2 className="left-align">
                     Tian Yu
                   </h2>
-                  <h1 className="homepage-intro-text">
+                  <h1 className="left-align">
                     AI. Automation. Androids.
                   </h1>
-                  <p className="homepage-intro-text homepage-intro-body">
+                  <p className="large-font left-align">
                     I'm a <span className="emphasis">robotics engineer</span> and <span className="emphasis">software developer </span> 
                     committed to solving tough problems and leveraging automation for our benefit. Looking to work with a passionate team
                     ideally based in North America.
                   </p>
-                  <h2 className="homepage-intro-text">
+                  <h2 className="left-align">
                     <a href="#projects"> See my work</a> 
                   </h2> 
                 </div>

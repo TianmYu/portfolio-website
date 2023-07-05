@@ -8,7 +8,7 @@ const Socials = () => {
             <div className="socials">
                 <a href="https://www.linkedin.com/in/tian-miao-yu/">
                     <div className="socials-bubble" >
-                        <div className="text-outer">
+                        <div className="text-outer center-flex">
                             <div className="text-inner">
                             <LinkedinLogo
                             fill='#0E1428' // TODO: load this from CSS variable declaration
@@ -22,7 +22,7 @@ const Socials = () => {
                 </a>
                 <a  href="https://github.com/TianmYu">
                     <div className="socials-bubble" >
-                        <div className="text-outer">
+                        <div className="text-outer center-flex">
                             <div className="text-inner">
                             <GithubLogo
                             fill='#0E1428'
@@ -36,7 +36,7 @@ const Socials = () => {
                 </a> 
                 <a href="https://www.facebook.com/tian.yu.3975">
                     <div className="socials-bubble" >
-                        <div className="text-outer">
+                        <div className="text-outer center-flex">
                             <div className="text-inner">
                             <FacebookLogo
                             fill='#0E1428'
