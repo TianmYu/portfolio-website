@@ -1,7 +1,7 @@
 import logo from '../logo.svg';
 
 export default function About() {
-    return <div> <h1> About </h1>
+    return <div> <h1> Contact </h1>
         <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
