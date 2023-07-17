@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import timelineDataRaw from './TimelineData';
+import {ReactComponent as ArrowSvg} from "../Assets/right-arrow.svg"
 
 const TimelineItem = ({ data, clickHandler }) => { 
     let itemClass = "timeline-item"
@@ -7,7 +8,7 @@ const TimelineItem = ({ data, clickHandler }) => {
         itemClass = "timeline-item timeline-link"
     }
     return (
-    <div onClick={() => clickHandler(data.page_link, data.page)}>
+    <div className="timeline-item-container" onClick={() => clickHandler(data.page_link, data.page)}>
         {data.type === "entry" && <div className={itemClass}>
             <div className="timeline-item-content">
             <div className="container-fluid borderless">
@@ -22,7 +23,6 @@ const TimelineItem = ({ data, clickHandler }) => {
                 </div>
                 <span className="timeline-circle" />
             </div>
-            
             </div>
         </div>}
         {data.type === "timestamp" && <div className="timeline-date-heading">
@@ -32,6 +32,18 @@ const TimelineItem = ({ data, clickHandler }) => {
             </div>
             <span className="timeline-circle-date" />
         </div>}
+        {data.page_link &&
+        <div>
+        <ArrowSvg
+        fill='#e3e3e3'
+        style={{
+            height:30,
+            width:30,
+            position:"relative",
+            top:"calc(50% - 15px)"
+        }}/>
+        </div>
+        }
     </div>
     )
 };

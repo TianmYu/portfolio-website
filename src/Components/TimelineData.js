@@ -24,7 +24,7 @@ let TimelineData = [
             tag: 'Projects',
             color: '#018f69'
         },
-        page_link: false,
+        page_link: true,
         page: 'intersections',
         type: 'entry'
     },

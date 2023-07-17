@@ -29,10 +29,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: F7F4F3;
+  color: var(--text-color);
 }
 
 .App-link {
@@ -296,6 +295,10 @@ a.anchor {
   cursor: pointer;
 }
 
+.timeline-item-container{
+  display:flex;
+}
+
 .timeline-item{
   background-color: var(--text-color);
   position:relative;
@@ -303,6 +306,7 @@ a.anchor {
   margin: 25px 0px 25px 0px;
   border-radius: 5px;
   min-width: 185px;
+  display:block;
 }
 
 .timeline-text{
@@ -363,6 +367,35 @@ a.anchor {
 }
 .side-drawer.open {
    transform: translateX(0);
+}
+
+.drawer-content-container{
+  margin-top:80px;
+  margin-left:60px;
+  margin-right:60px;
+  margin-bottom:80px;
+}
+
+.drawer-header {
+  margin-top: 15px;
+  margin-bottom:15px;
+}
+
+.image-outer{
+  justify-content: center;
+  display:flex;
+}
+
+.image-container{
+  width:min-content;
+  margin-bottom:20px;
+  margin-top:20px;
+}
+
+.image-caption{
+  margin-top:10px;
+  font-size:medium;
+  text-align:center;
 }
 
 /* Backdrop */

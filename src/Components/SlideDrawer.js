@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Test1, Test2} from '../TimelinePages/index';
+import {Intersections, Test2} from '../TimelinePages/index';
 
 import ResumePage from '../Pages/ResumeSlider.js'
 
@@ -8,13 +8,9 @@ class SlideDrawer extends Component {
    // also needs to record where the scroll is in each page
    state = {
       timelinePages: {
-         test1: { 
+         intersections: { 
             scrollPos: 0,
-            component: <Test1 scroll={this.drawerScrollHandler.bind(this)}/>,
-         },
-         test2: {
-            scrollPos: 0,
-            component: <Test2 scroll={this.drawerScrollHandler.bind(this)}/>,
+            component: <Intersections scroll={this.drawerScrollHandler.bind(this)}/>,
          },
          ResumePage: {
             scrollPos: 0,
