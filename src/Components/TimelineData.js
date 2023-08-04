@@ -35,7 +35,7 @@ let TimelineData = [
             tag: 'Education',
             color: '#018f69'
         },
-        page_link: false,
+        page_link: true,
         page: 'thesis',
         type: 'entry'
     },

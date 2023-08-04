@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Intersections, Test2} from '../TimelinePages/index';
+import {Intersections, Thesis} from '../TimelinePages/index';
 
 import ResumePage from '../Pages/ResumeSlider.js'
 
@@ -11,6 +11,10 @@ class SlideDrawer extends Component {
          intersections: { 
             scrollPos: 0,
             component: <Intersections scroll={this.drawerScrollHandler.bind(this)}/>,
+         },
+         thesis: { 
+            scrollPos: 0,
+            component: <Thesis scroll={this.drawerScrollHandler.bind(this)}/>,
          },
          ResumePage: {
             scrollPos: 0,

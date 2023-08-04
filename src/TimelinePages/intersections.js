@@ -118,16 +118,6 @@ export default function Intersections(props) {
             increased waiting.
           </p>
           <p className="large-font">
-            As we can see, the Greedy strategy seems generally favourable, execpt when 
-            both lights are on for a very short amount of time, or when the east/west 
-            light is on for much longer than the north/south light. It makes sense that 
-            the Lazy strategy is better in these cases as in the former, if the lights change 
-            before you are able to fully cross then you essentially don't have to wait if 
-            using Lazy, and in the latter the greedy strategy is exclusively dependant 
-            on the average north/south light on time, and having it be much lower results in 
-            increased waiting.
-          </p>
-          <p className="large-font">
             In conclusion, in most cases it's better to cross the street whenever you can,
             instead of waiting for the intersection. Exceptions include if you are 
             walking to an intersection that changes very often, or if you are on a small road 

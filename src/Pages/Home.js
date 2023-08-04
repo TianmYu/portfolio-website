@@ -6,10 +6,7 @@ import Image from 'react-bootstrap/Image';
 import Timeline from '../Components/Timeline';
 import Drawer from '../Components/SlideDrawer';
 import Backdrop from '../Components/Backdrop';
-import Socials from '../Components/Socials'
-
-import {Test1, Test2} from '../TimelinePages/index';
-
+import Socials from '../Components/Socials';
 
 class Home extends Component {
   state = {
