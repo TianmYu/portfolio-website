@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import thesisDiagram from '../Assets/thesis-diagram.png'
 
 export default function Thesis(props) {
     const myRef = useRef(null)
@@ -59,6 +60,23 @@ export default function Thesis(props) {
               individual partitions, we could then generate windows with arbitrarily large overlaps without 
               worrying about data being duplicated between validation and training sets.
             </p>
+            <div className="image-outer">
+              <div className="image-container">
+                <img 
+                    style={{
+                      width:"min(60vw, 600px)",
+                    }}    
+                    loading="lazy"
+                    src={thesisDiagram}/>
+                    <p className="image-caption">
+                      Visualization of partitioning methods, with time series data along the 
+                      x axis. Partitions are represented by
+                      the blocks on the top row, while the overlapping blue rectangles represent 
+                      individual data frames. Note how the data frames do not share data across 
+                      partition lines, where potential training/validation splits are made.
+                    </p>
+                </div>
+              </div>
             <h4> Results</h4>
             <p className="large-font">
               This change resuled in a nearly 10% increase in relevant sensitivity and specificity performance 
