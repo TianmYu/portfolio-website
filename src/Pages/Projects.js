@@ -1,4 +1,5 @@
 import logo from '../logo.svg';
+import React, { useEffect, useRef } from 'react';
 
 export default function Projects() {
     return <div> <h1> Projects </h1>

@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import FileViewer from 'react-file-viewer';
 
-import resume from "../Assets/Resume-Tian-Yu.pdf";
-
-
 const type = "pdf"
 const file = "Resume-Tian-Yu.pdf"
 

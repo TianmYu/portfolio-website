@@ -7,3 +7,7 @@ and a showcase of past projects.
 ## Library Docs
 
 For running code, please check out the [React documentation](https://reactjs.org/).
+
+## HIGH LEVEL TODOS
+
+Upgrade from node 16 to 18, causes a breaking change with pdf viewer, need to migrate.
